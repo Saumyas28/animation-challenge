@@ -19,7 +19,7 @@ class Card extends React.Component {
         })
     }
     onImageClick = () => {
-        console.log('image details');
+        this.props.history.push('../Details')
     }
     render() {
         return (
