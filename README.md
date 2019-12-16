@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This project contains a reusable card component which can be used by online shopping websites to show the images or views of their product from different angles in a 3D way as well as there is animation attached to 'Add To Cart'. When a user clicks on add to cart button the image of that object flies and drops in the cart.
 
+## GIF
+
+![](animation.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
