@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { Icon } from 'antd'
-import Card from '../Card/index'
 import { BrowserRouter, Route } from 'react-router-dom'
 import './style.scss'
-import Details from '../Details'
+import Details from '../Details';
+
+const Card = React.lazy(() => import('../Card/index'))
 
 class Cart extends React.Component {
     constructor(props) {
@@ -31,9 +32,13 @@ class Cart extends React.Component {
                 <div className="gallery">
                     <BrowserRouter>
                         {this.props.images.map((key, index) => (
-                            <Route exact path="/"
+                            <Route key={index} exact path="/"
                                 render={props => {
-                                    return (<Card {...props} key={index} index={index} image={key} onAddToCart={this.onAddToCart} />)
+                                    return (
+                                        <Suspense fallback={<div>loading...</div>}>
+                                            <Card {...props} index={index} image={key} onAddToCart={this.onAddToCart} />
+                                        </Suspense>
+                                    )
                                 }} />
                         ))}
                         <Route exact path="/Details"
