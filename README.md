@@ -8,6 +8,10 @@ This project contains a reusable card component which can be used by online shop
 
 ![](ezgif.com-gif-maker.gif)
 
+## Slow GIF Of Add To Cart
+
+![](slow-add-to-cart.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
