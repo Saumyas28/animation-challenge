@@ -6,7 +6,7 @@ This project contains a reusable card component which can be used by online shop
 
 ## GIF
 
-![](cart-animation.mov)
+![](ezgif.com-gif-maker.gif)
 
 ## Available Scripts
 
