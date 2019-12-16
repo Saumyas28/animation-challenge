@@ -44,7 +44,7 @@ class Card extends React.Component {
                         className={this.state.clickedButton === this.props.index ? 'selected-img' : 'item-img'}
                         src={this.props.image.frontView} alt="item1" />
 
-                    <span className="price-tag">Price</span>
+                    <span className="price-tag"><b>Price</b></span>
                 </div>
             </div>
         )
