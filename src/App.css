@@ -2,10 +2,11 @@
   text-align: center;
   display: flex;
   justify-content: space-evenly;
+  overflow-y: hidden;
 }
 
 .App-header {
-  background-color: #4f8c8c;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

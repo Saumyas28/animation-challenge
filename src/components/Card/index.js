@@ -1,4 +1,5 @@
 import React from 'react';
+//import { Icon } from 'antd'
 import './style.scss'
 
 class Card extends React.Component {
@@ -11,6 +12,7 @@ class Card extends React.Component {
         }
     }
     onClick = (index) => {
+        console.log('in add to cart')
         this.props.onAddToCart();
         this.setState({
             clickedButton: index,
@@ -23,24 +25,27 @@ class Card extends React.Component {
     }
     render() {
         return (
-            <div className="wrap">
-                <div className="cube" onClick={() => this.onImageClick()}>
-                    <div style={{ backgroundImage: `url(${this.props.image})` }} className="front"></div>
-                    <div style={{ backgroundImage: `url(${this.props.image})` }} className="back"></div>
-                    <div style={{ backgroundImage: `url(${this.props.image})` }} className="top"></div>
-                    <div style={{ backgroundImage: `url(${this.props.image})` }} className="bottom"></div>
-                    <div style={{ backgroundImage: `url(${this.props.image})` }} className="left"></div>
-                    <div style={{ backgroundImage: `url(${this.props.image})` }} className="right"></div>
-                </div>
-                <img
-                    className={this.state.clickedButton === this.props.index ? 'selected-img' : 'item-img'}
-                    src={this.props.image} alt="item1" />
+            <div className="card">
                 <button disabled={this.state.selectedItems.indexOf(this.props.index) === (-1) ? false : true}
                     className="add-button"
                     onClick={() => this.onClick(this.props.index)}>
-                    Add To Cart
+                    <b>Add To Cart</b>
                 </button>
-                <span className="price-tag">Price</span>
+                <div className="wrap">
+                    <div className="cube" onClick={() => this.onImageClick()}>
+                        <div style={{ backgroundImage: `url(${this.props.image.frontView})` }} className="front"></div>
+                        <div style={{ backgroundImage: `url(${this.props.image.backView})` }} className="back"></div>
+                        <div style={{ backgroundImage: `url(${this.props.image.topView})` }} className="top"></div>
+                        <div style={{ backgroundImage: `url(${this.props.image.bottomView})` }} className="bottom"></div>
+                        <div style={{ backgroundImage: `url(${this.props.image.leftView})` }} className="left"></div>
+                        <div style={{ backgroundImage: `url(${this.props.image.rightView})` }} className="right"></div>
+                    </div>
+                    <img
+                        className={this.state.clickedButton === this.props.index ? 'selected-img' : 'item-img'}
+                        src={this.props.image.frontView} alt="item1" />
+
+                    <span className="price-tag">Price</span>
+                </div>
             </div>
         )
     }

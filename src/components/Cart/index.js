@@ -21,9 +21,10 @@ class Cart extends React.Component {
         return (
             <div>
                 <div className="nav-bar">
+                    <img className='logo' src='https://image.freepik.com/free-vector/abstract-logo-with-colorful-leaves_1025-695.jpg' alt='logo' />
                     <Icon className="icon"
                         type={this.props.iconType}
-                        style={{ fontSize: '40px', color: 'black' }}
+                        style={{ fontSize: '30px', color: 'white' }}
                     />
                     <span className='cart-count'>{this.state.cartCount}</span>
                 </div>

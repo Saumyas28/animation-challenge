@@ -1,27 +1,35 @@
 .nav-bar {
   width: 100vw;
   height: 70px;
-  background-color: #f2e4d8;
+  background-color: #121212;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  padding: 10px;
 }
 
 .icon {
   margin-right: 5px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  flex-grow: 8;
 }
 
 .cart-count {
-  color: black;
+  color: white;
   margin-right: 10px;
 }
 
 .gallery {
-  margin-top: 20px;
-  margin-left: 10px;
+  height: 90vh;
   display: flex;
+  background-image: url("https://previews.123rf.com/images/elenathewise/elenathewise1102/elenathewise110200040/8871761-many-colorful-shopping-bags-on-white-background.jpg");
 }
 
 .item-holder {
@@ -35,6 +43,8 @@
 
 .item-img {
   opacity: 0;
+  width: 250px;
+  height: 250px;
 }
 .selected-img {
   animation-name: animated-img;
